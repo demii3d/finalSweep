@@ -1,5 +1,6 @@
 import { writeFileSync, readFileSync } from 'node:fs'
-const base = (process.env.VITE_SITE_URL || 'https://www.example.com').replace(/\/$/, '')
+const envFile = (() => { try { return readFileSync(new URL('../.env', import.meta.url), 'utf8').match(/^VITE_SITE_URL=(.+)$/m)?.[1].trim() } catch { return undefined } })()
+const base = (process.env.VITE_SITE_URL || envFile || 'https://www.example.com').replace(/\/$/, '')
 const read = (f) => readFileSync(new URL(`../src/data/${f}`, import.meta.url), 'utf8')
 const slugs = (f) => [...read(f).matchAll(/^\s{4}slug: '([^']+)'/gm)].map((m) => m[1])
 const paths = ['/', '/about', '/services', ...slugs('services.ts').map((s) => `/services/${s}`), '/products', ...slugs('products.ts').map((s) => `/products/${s}`), '/who-we-serve', '/contact']
