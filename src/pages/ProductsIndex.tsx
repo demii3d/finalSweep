@@ -12,7 +12,7 @@ export default function ProductsIndex() {
   const ld = { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: productCategories.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, url: absoluteUrl(`/products/${c.slug}`) })) }
   return (
     <>
-      <SEOHead title="Cleaning Products & Supplies" description="Cleaning solutions, detergents, disinfectants, tools, equipment and essentials for households and businesses from Final Sweep Co. Ltd." image="/images/products.jpg" jsonLd={ld} />
+      <SEOHead title="Cleaning Products & Supplies" description="Cleaning solutions, detergents, disinfectants, tools, equipment and essentials for households and businesses from Final Sweep Co. Ltd." jsonLd={ld} />
       <HeroSection crumbs={[{ label: 'Cleaning Products' }]} eyebrow="Division 2" title="Cleaning Products & Supplies" text="Essential products and materials for everyday cleaning, for individuals, households and businesses." image="/images/products.jpg" imageAlt="Gloved hands handling cleaning products">
         <Button to="/contact?type=products">Enquire About Products</Button>
       </HeroSection>

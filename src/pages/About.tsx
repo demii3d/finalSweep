@@ -7,7 +7,7 @@ import { CTASection } from '../components/CTASection'
 export default function About() {
   return (
     <>
-      <SEOHead title="About Us" description="Final Sweep Co. Ltd provides residential and commercial cleaning services alongside cleaning products and supplies, with a focus on professionalism and customer satisfaction." image="/images/about.jpg" />
+      <SEOHead title="About Us" description="Final Sweep Co. Ltd provides residential and commercial cleaning services alongside cleaning products and supplies, with a focus on professionalism and customer satisfaction." />
       <HeroSection crumbs={[{ label: 'About Us' }]} eyebrow="About Final Sweep" title="A Cleaner Approach to Everyday Environments." text="Dependable cleaning services and cleaning products for homes, properties and businesses." image="/images/about.jpg" imageAlt="Bright, stylish living room" />
       <section className="section">
         <div className="container-page grid gap-12 lg:grid-cols-2">

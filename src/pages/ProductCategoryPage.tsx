@@ -14,7 +14,7 @@ export default function ProductCategoryPage() {
   const items = getProductsByCategory(c.slug)
   return (
     <>
-      <SEOHead title={c.name} description={c.seoDescription} image={c.image} />
+      <SEOHead title={c.name} description={c.seoDescription} />
       <HeroSection crumbs={[{ label: 'Cleaning Products', to: '/products' }, { label: c.name }]} eyebrow="Cleaning Products" title={c.name} text={c.intro} image={c.image} imageAlt={c.imageAlt}>
         <Button to={`/contact?type=products&category=${c.slug}`}>Enquire About Products</Button>
       </HeroSection>

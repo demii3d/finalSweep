@@ -17,7 +17,7 @@ export function MobileNavigation({ open, onClose }: { open: boolean; onClose: ()
   }, [open, onClose])
 
   return (
-    <div id="mobile-nav" className={cn('fixed inset-x-0 top-[4.5rem] bottom-0 z-30 overflow-y-auto bg-white transition duration-300 xl:hidden', open ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0')}>
+    <div id="mobile-nav" className={cn('absolute inset-x-0 top-full z-30 max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-white shadow-lift transition duration-300 xl:hidden', open ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0')}>
       <nav aria-label="Mobile" className="container-page py-6">
         <ul className="divide-y divide-line">
           {mainNav.map((item) =>

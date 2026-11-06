@@ -23,7 +23,7 @@ export default function ServiceDetail() {
 
   return (
     <>
-      <SEOHead title={s.name} description={s.seoDescription} image={s.image} jsonLd={ld} />
+      <SEOHead title={s.name} description={s.seoDescription} jsonLd={ld} />
       <HeroSection crumbs={[{ label: 'Cleaning Services', to: '/services' }, { label: s.name }]} eyebrow="Cleaning Services" title={s.name} text={s.heroTagline} image={s.image} imageAlt={s.imageAlt}>
         <Button to={`/contact?type=services&service=${s.slug}`}>Request a Cleaning Quote</Button>
       </HeroSection>

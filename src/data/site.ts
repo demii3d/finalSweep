@@ -17,4 +17,5 @@ export const site = {
   enquiryEndpoint: (import.meta.env.VITE_ENQUIRY_ENDPOINT as string | undefined) ?? null,
 }
 
-export const ogImage = '/images/hero.jpg'
+export const ogImage = '/og-image.png'
+export const ogImageAlt = 'Final Sweep Co. Ltd logo'

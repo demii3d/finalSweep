@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function WhoWeServe() {
   return (
     <>
-      <SEOHead title="Who We Serve" description="Cleaning services and products for households, landlords, property managers, offices, retail premises, commercial businesses and private clients." image="/images/commercial.jpg" />
+      <SEOHead title="Who We Serve" description="Cleaning services and products for households, landlords, property managers, offices, retail premises, commercial businesses and private clients." />
       <HeroSection crumbs={[{ label: 'Who We Serve' }]} eyebrow="Our Customers" title="Supporting Homes, Properties and Businesses." text="Residential and commercial customers, with cleaning services and supplies tailored to each." image="/images/commercial.jpg" imageAlt="Clean, modern commercial interior" />
       <section className="section">
         <div className="container-page">

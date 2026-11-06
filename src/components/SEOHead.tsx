@@ -1,12 +1,11 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { absoluteUrl } from '../lib/seo'
-import { ogImage, site } from '../data/site'
+import { ogImage, ogImageAlt, site } from '../data/site'
 
 interface Props {
   title: string
   description: string
-  image?: string
   noindex?: boolean
   jsonLd?: object | object[]
 }
@@ -22,11 +21,11 @@ function setMeta(attr: 'name' | 'property', key: string, content: string) {
 }
 
 /** Lightweight head manager (no extra dependency). */
-export function SEOHead({ title, description, image = ogImage, noindex, jsonLd }: Props) {
+export function SEOHead({ title, description, noindex, jsonLd }: Props) {
   const { pathname } = useLocation()
   const full = title.includes(site.shortName) ? title : `${title} | ${site.name}`
   const url = absoluteUrl(pathname === '/' ? '/' : pathname)
-  const img = absoluteUrl(image)
+  const img = absoluteUrl(ogImage)
 
   useEffect(() => {
     document.title = full
@@ -37,12 +36,16 @@ export function SEOHead({ title, description, image = ogImage, noindex, jsonLd }
     setMeta('property', 'og:type', 'website')
     setMeta('property', 'og:url', url)
     setMeta('property', 'og:image', img)
+    setMeta('property', 'og:image:width', '1200')
+    setMeta('property', 'og:image:height', '630')
+    setMeta('property', 'og:image:alt', ogImageAlt)
     setMeta('property', 'og:locale', 'en_GB')
     setMeta('property', 'og:site_name', site.name)
     setMeta('name', 'twitter:card', 'summary_large_image')
     setMeta('name', 'twitter:title', full)
     setMeta('name', 'twitter:description', description)
     setMeta('name', 'twitter:image', img)
+    setMeta('name', 'twitter:image:alt', ogImageAlt)
     let link = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
     if (!link) {
       link = document.createElement('link')
