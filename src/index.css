@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-navy: #17324d;
+  --color-brand: #2478b7;
+  --color-brand-dark: #1d629a;
+  --color-teal: #24a6a0;
+  --color-teal-dark: #167a75;
+  --color-soft: #f5f8fa;
+  --color-sky: #eaf3f8;
+  --color-ink: #252b32;
+  --color-muted: #5b6671;
+  --color-line: #e2e8ed;
+  --font-heading: 'Manrope', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --shadow-card: 0 1px 2px rgb(23 50 77 / 0.05), 0 8px 24px -12px rgb(23 50 77 / 0.15);
+  --shadow-lift: 0 2px 4px rgb(23 50 77 / 0.06), 0 20px 40px -16px rgb(23 50 77 / 0.25);
+  --breakpoint-3xl: 120rem;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  body { @apply bg-white font-sans text-ink antialiased; line-height: 1.65; overflow-x: hidden; }
+  h1, h2, h3, h4 { @apply font-heading text-navy; line-height: 1.15; letter-spacing: -0.02em; text-wrap: balance; }
+  :focus-visible { outline: 3px solid var(--color-brand); outline-offset: 3px; border-radius: 4px; }
+  img { @apply block max-w-full; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8; }
+  .section { @apply py-16 sm:py-20 lg:py-28; }
+  .eyebrow { @apply font-heading text-xs font-bold uppercase tracking-[0.16em] text-teal-dark; }
+  .h-display { @apply text-4xl font-extrabold sm:text-5xl lg:text-6xl; }
+  .h-section { @apply text-3xl font-extrabold sm:text-4xl lg:text-[2.6rem]; }
+  .lead { @apply text-base text-muted sm:text-lg; }
+  .card { @apply rounded-2xl border border-line bg-white shadow-card; }
+  .field { @apply w-full rounded-lg border border-[#b9c4cd] bg-white px-4 py-3 text-base text-ink placeholder:text-[#8a95a0] transition-colors hover:border-brand focus:border-brand; }
+  .field[aria-invalid='true'] { @apply border-red-700 bg-red-50/40; }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.7s var(--ease-out-soft) both; }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.example.com/</loc></url>
+  <url><loc>https://www.example.com/about</loc></url>
+  <url><loc>https://www.example.com/services</loc></url>
+  <url><loc>https://www.example.com/services/domestic-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/commercial-office-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/deep-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/end-of-tenancy-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/post-construction-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/window-cleaning</loc></url>
+  <url><loc>https://www.example.com/services/laundry-ironing</loc></url>
+  <url><loc>https://www.example.com/products</loc></url>
+  <url><loc>https://www.example.com/products/cleaning-solutions</loc></url>
+  <url><loc>https://www.example.com/products/detergents</loc></url>
+  <url><loc>https://www.example.com/products/disinfectants</loc></url>
+  <url><loc>https://www.example.com/products/cleaning-tools</loc></url>
+  <url><loc>https://www.example.com/products/cleaning-equipment</loc></url>
+  <url><loc>https://www.example.com/products/cleaning-essentials</loc></url>
+  <url><loc>https://www.example.com/who-we-serve</loc></url>
+  <url><loc>https://www.example.com/contact</loc></url>
+</urlset>
